@@ -1,0 +1,9 @@
+Assignment	:PROG1347 C - Programming Assignment #1a
+Name		:Brandon Davies
+Date		:September 9, 2014
+
+BUGS/ISSUES
+============
+ - The cases are numbered 0 through 25 instead of 1 through 26
+ - At the end of the game, it says "ok, lets continue" and then says the game is over
+	just seems not right

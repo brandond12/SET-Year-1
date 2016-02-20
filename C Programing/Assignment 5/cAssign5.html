@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+<h1>Introduction To C<br/>
+  Assignment #5</h1>
+<h2>Functional Requirements:</h2>
+<ul>
+  <li> Write a program that creates a text file containing the printed ASCII  values of the data from a binary file. &#160;</li>
+  <li>Take in an input file name as the first (and  only) argument on the command line using argc and argv in main().&#160;
+    <ul>
+      <li>This  file must be opened as a binary file.<br/>
+        </li>
+      <li>If the filename is not found on the command  line, display an error message and quit the program.</li>
+    </ul>
+  </li>
+  <li>For each character, print (to the output file) the numeric ASCII representation of the character using fprintf().<br/>
+      <ul>
+            <li>The output file must be called contents.txt and must be stored in the current directory. It is a text file.</li>
+            <li>The numeric value must be printed as an integer,  three characters in size, zero-padded (use fprintf() width formatting codes for  this). Put one space between each three-character integer.<br/>
+                        </li>
+    </ul>
+  </li>
+  <li>Every 10 input characters, print a &#39;\n&#39; in the output  file. Also put a &#39;\n&#39; at the end of the file.</li>
+</ul>
+<h2>Other Requirements<br/>
+</h2>
+<ul>
+  <li>Define a function called getSmallFileLength() in a file you create called fileUtilities.c. It takes a name of a file as a parameter as a const char *. It must use FindFirstFile() to get the length of that file. If FindFirstFile indicates an error, display an error message and return -1. Otherwise, return the nFileSizeLow value from the WIN32_FIND_DATA struct you declare.  </li>
+
+  <ul>
+    <li>This function only works properly for files that are less than 2,147,483,647 bytes in size. This is a limitation that must be documented in both the function comment and an inline comment in the function itself.</li>
+    <li>The reason that you are doing this is that you have now created a utility function that you could use in other programs if you have the need.<br/>
+        </li>
+  </ul>
+  <li>Find the size of the input file using a call to getSmallFileLength() as mentioned above. The function call must have the input filename passed as a parameter.
+    <ul>
+      <li>If the size found is less than 1, quit the program (do not display an error message).<br/>
+        </li>
+    </ul>
+      </li>
+  <li>Dynamically allocate a block of memory of the  appropriate size using malloc() to store the contents of the input file.<br/>
+    </li>
+  <li>Read the entire file in using one fread()  call.&#160; <br/>
+    </li>
+  <li>Close the files  once done.<br/>
+  </li>
+  <li>Free the allocated block once done.</li>
+  <li>Check return values for all file I/O functions and  memory allocation functions as appropriate. In the case of errors, display an error message and quit the program cleanly.</li>
+  <li>Do not get user input from the keyboard in your program. At all. I&#39;m serious.</li>
+  <li>Do  not use global variables or goto.</li>
+  <li>Do not use exit().</li>
+  <li>Appropriate programming style as discussed in  class must be used.
+    <ul>
+        <li>Header comments must be put at the top of <strong>each</strong> source file. The &quot;Description&quot; of the cA5.c file header must describe what the <strong>program</strong> does. The  &quot;Description&quot; comments in the other source files must describe the <strong>contents of the file</strong>. You must include the project name in the header comment for cA5.c and cA5_proto.h</li>
+    </ul>
+  </li>
+</ul>
+<h2>File Requirements</h2>
+<ul>
+  <li>Create a project called cA5.&#160;
+    <ul>
+      <li>That project should contain cA5.c,  fileUtilities.c, and cA5_proto.h.&#160; </li>
+      <li>It will generate cA5.exe.</li>
+    </ul>
+  </li>
+  <li>Put all prototypes in cA5_proto.h.&#160; Do not put <strong>any </strong>prototypes in cA5.c.&#160;</li>
+  <li>Rename cA5.exe to cA5.x.</li>
+  <li>Put all source files and cA5.x in the  appropriate dropbox in D2L.</li>
+</ul>
+<h2>Visual C++ issue:</h2>
+<ul>
+  <li>Visual C++  will not compile your call to FindFirstFile successfully unless you make a change to the Project Properties to &quot;Use Multi-byte Character Set&quot; instead of using Unicode. This was covered in class. You <strong>must </strong>change this from the default in order to get your program to compile!</li>
+</ul>
+
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.3.0.791-56 "></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');</script></body></html>

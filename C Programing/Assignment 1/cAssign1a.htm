@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+
+<h1>Assignment #1a</h1>
+<p align="center" class="style1">This assignment is designed  for students who already know C (or a similar language) and want more of a challenge and want to work ahead (WAY ahead).</p>
+<p align="center" class="style1"> I mean it. This assignment is NOT for someone who is relatively new to programming.</p>
+
+  Simulate the game <em>Deal or No Deal </em>as a text console-based program.&#160; An online graphical version of this television game show  can be found at <a href="http://www.gamegecko.com/dealornodeal.php">http://www.gamegecko.com/dealornodeal.php</a>.&#160; 
+<p>There are 26 &quot;suitcases&quot;, each containing an  amount of money (amounts listed in the online game).&#160; No two suitcases contain the same amount.&#160; Each game has the suitcase amounts assigned  randomly.&#160; The contestant selects a  suitcase number, which then becomes their suitcase.&#160; After picking the case, the contestant  selects six of the remaining suitcases.&#160;  The amounts contained within those cases are revealed, one at a  time.&#160; After the sixth suitcase is  revealed, The Banker makes an offer to buy the contestant&#39;s case for a certain  amount, calculated by the program based on the cash amounts still in play.&#160; If the contestant accepts the deal, the game is  over and the contestant&#39;s suitcase contents are revealed.&#160; If the contestant turns down the offer, they  must then select another five of the remaining cases to reveal.&#160; The Banker proposes another deal, which is  accepted or rejected.&#160; Play continues,  revealing a lesser number of suitcases each time, until a deal is accepted or  all suitcases are revealed.</p>
+<p>The graphical and sound aspects of the online game should  not be replicated.&#160; What is desired in  this assignment is replication of the gameplay.</p>
+<p>In determining a fair amount for The Banker to offer, you  are allowed to average the remaining amounts and multiply that value by a  random value between 75% and 110%.&#160;  Alternatively, if you find a better way of doing it, you can use it, as long as it truly is &quot;better&quot; (yes, this is subjective). If you choose to use a formula that you found on the Internet, you absolutely <strong>must </strong>credit the webpage and/or author (if known) in a comment near where you implement it.</p>
+<p>Helpful Hint: You will want to use srand(), rand(),  fgets(), sscanf(), printf().</p>
+<p>Again, it is assumed that you either know C well already or you can pick up what you don&#39;t know easily. It is <strong>not reasonable </strong>to expect me to teach you what you don&#39;t know in order to allow you to do this assignment.</p>
+<p>You must use C to complete this assignment. </p>
+<p>It is your responsibility to follow the course requirements as  detailed in the course notes <strong>and </strong>the SET Coding Standards.&#160; Some of the items that   apply to this assignment are (not limited to):</p>
+<ul>
+  <li>Have appropriate header comments and  descriptions.</li>
+  <li>Use correct and consistent style.</li>
+  <li>Use mixed case or underscores to separate words  in identifier names.</li>
+  <li>Always initialize your variables.</li>
+  <li>Indent the bodies of decisions appropriately.</li>
+  <li>Do not use global variables.&#160;</li>
+  <li>Do not use scanf().</li>
+  <li>Use function comments.</li>
+  <li>Use prototypes.</li>
+  <li>Do not use goto.</li>
+</ul>
+<p>Call your project cA1a. Call your source code cA1a.c to generate cA1a.exe.&#160; Do not create any other source files. Both files must be put into the D2L dropbox for Assignment #1a.</p>
+<p>If you want to do easy user input of integers, you can use getNum(). It is a function that you will create for Assignment #2. It looks like this:</p>
+<pre>	int getNum(void)
+   {
+
+	/* the array is 121 bytes in size; we&#39;ll see in a later lecture how we can improve this code */
+   char record[121] = {0};&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; /*  record stores the string */
+   int number = 0;</pre>
+<pre>&#160;&#160;&#160;	/* NOTE to  student: indent and brace this function consistent with  your others */
+		/* use  fgets() to get a string from the keyboard */
+		fgets(record,  121, stdin);</pre>
+<pre>&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* extract  the number from the string; sscanf() returns a number 
+   	 * corresponding with the number of items it found in the string */
+   	if(  sscanf(record, &quot;%d&quot;, &amp;number) != 1 )
+   	{
+   		/*  if the user did not enter a number recognizable by 
+		     * the system, set number to -1 */
+			number  = -1;
+   	}</pre>
+<pre>&#160;&#160;&#160;&#160;&#160;&#160;&#160;return  number;
+   }</pre>
+<p>If you choose to use getNum(), you must put the above code in your source code or you will have a linker error.</p>
+<p>&#160;</p>
+<p align="center" class="style1">If you do this assignment well, you may be eligible for a 50 mark bonus (out of 100)</p>
+<p align="center" class="style1">and </p>
+<p align="center" class="style1">your mark will also apply to Assignment #3 (you do not have to do Assignment #3).</p>
+<p align="center" class="style1">This only applies if you do the assignment well.</p>
+<p>&#160;</p>
+
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.3.0.791-56 "></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');</script></body></html>

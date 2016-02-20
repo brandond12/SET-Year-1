@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+<p><strong>Command name:</strong> wrapfile</p>
+<p><strong>Purpose:</strong> To wrap long lines for output to the console window</p>
+<p><strong>Synopsis:</strong> <strong>wrapfile  </strong>[<strong>-w </strong><em>width</em>] <em>file ...</em></p>
+<p><strong>Description:</strong> </p>
+<p>The <strong>wrapfile</strong> utility is a filter which wraps the contents of the specified files, breaking the lines to have a maximum of 40 columns (or a different maximum if the <strong>-w</strong> option is used; this maximum is called the &quot;wrap length&quot;). </p>
+<p>The options are as follows:</p>
+<table width="364" border="1">
+  <tr>
+    <td width="106">-w <em>width</em> </td>
+    <td width="242">Specify a line width to use instead of the default 40 columns. </td>
+  </tr>
+</table>
+<h4>Assumptions:</h4>
+<ul>
+  <li>There will always be one or more filenames on the command line.
+    <ul>
+      <li>All filenames are guaranteed to be after all options.</li>
+    </ul>
+  </li>
+  <li>Filenames never start with &#39;-&#39;.</li>
+  <li>The files to be taken as input for wrapping are guaranteed to be text files if they exist.
+    <ul>
+        <li>However, the files are not guaranteed to exist or be accessible (see Errors section).</li>
+    </ul>
+    </li>
+  <li>The maximum length of a line found within any input file is 100 characters. </li>
+  <li>The files will not contain backspace characters or TAB characters or other special characters that would mess up the wrapping. </li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+  <li>If the wrap point is, for example, 40, then that means that the 41st character goes on the next line (just to clarify if the 40th character gets wrapped or not).</li>
+  <li>There might or might not be a space between the -w and the specified width.</li>
+  <li>A &#39;\n&#39; character is actually  a carriage return character (ASCII value 0x0d) followed by a line feed character (ASCII value 0x0a). </li>
+  <li>Files do not necessarily end with a &#39;\n&#39;. 
+    <ul>
+      <li>The reason for this is that some editing programs put the &#39;\n&#39; at the end and some do not.</li>
+      <li>If a file doesn&#39;t end with a &#39;\n&#39;, you are required to       add one (don&#39;t have the output from two different files on the same line and don&#39;t have the next command prompt on the same line).
+        <ul>
+          <li>I won&#39;t be testing for this.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>If there are multiple input files on the command line, the next file should begin printing on the next line,       with no blank line between files and nothing even indicating that there are multiple files (e.g. no new filename displayed and no line of asterisks).</li>
+  <li>If there are multiple blank lines at the end of an input file, they should all be also present in the output.</li>
+<li>If width is anything other than a positive integer less than 65536 (i.e. 1 to 65535 inclusive), display a usage error message (described below). </li>
+  <li><strong>You will likely get a better mark if you use Baby Steps to design this program.</strong>
+    <ul>
+      <li>At the very least, get the <strong>basic operation</strong> of the program working before you try to embellish it with other requirements.</li>
+    </ul>
+  </li>
+  <li>This is NOT a group project. It must be done individually.</li>
+</ul>
+<p><strong>Errors: </strong></p>
+<ul>
+  <li>Displays a &quot;File not openable&quot; error message and terminates without any other further output if any of the files cannot be opened. 
+    <ul>
+      <li>If this happens on a second or subsequent file, it is OK to process the previous files that can be opened.</li>
+    </ul>
+  </li>
+  <li>Displays a &quot;Usage: wrapfile [-w width] file ...&quot; error message and terminates if the command line options are incorrect. 
+    <ul>
+      <li>Your error message must look exactly as stated above.</li>
+    </ul>
+  </li>
+  <li>Displays an appropriate error message and terminates without any other further output if there is a error with reading or closing any of the files.</li>
+</ul>
+<p><strong>Exit Status: </strong></p>
+<table width="242" border="1">
+  <tr>
+    <td width="19">0</td>
+    <td width="207">successful</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>can&#39;t open file </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>command line options incorrect </td>
+  </tr>
+  
+  <tr>
+    <td>4</td>
+    <td>any other fatal error</td>
+  </tr>
+</table>
+<p>&#160;</p>
+<p>&#160; </p>
+
+
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.3.0.791-56 "></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');</script></body></html>

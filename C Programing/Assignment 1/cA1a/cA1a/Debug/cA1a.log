@@ -1,0 +1,16 @@
+﻿Build started 14/01/2015 3:49:13 PM.
+     1>Project "C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\cA1a\cA1a.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt cA1a.c
+         cA1a.c
+     1>c:\users\brandon\dropbox\set\y1s1\c programing\assignment 1\ca1a\ca1a\ca1a.c(162): warning C4013: 'rand' undefined; assuming extern returning int
+     1>c:\users\brandon\dropbox\set\y1s1\c programing\assignment 1\ca1a\ca1a\ca1a.c(274): warning C4013: 'srand' undefined; assuming extern returning int
+     1>c:\users\brandon\dropbox\set\y1s1\c programing\assignment 1\ca1a\ca1a\ca1a.c(274): warning C4013: 'time' undefined; assuming extern returning int
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\Debug\cA1a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\Debug\cA1a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\Debug\cA1a.lib" /MACHINE:X86 Debug\cA1a.obj
+         cA1a.vcxproj -> C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\Debug\cA1a.exe
+     1>Done Building Project "C:\Users\Brandon\Dropbox\SET\Y1S1\C Programing\Assignment 1\cA1a\cA1a\cA1a.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.18

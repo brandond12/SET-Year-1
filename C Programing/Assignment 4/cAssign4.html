@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+<h1>Assignment #4 </h1>
+<p>  Use arrays to write a program to tell you  how long it will take you to fly between any two cities on an extremely unusual  airline. The times are: </p>
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="96" valign="top"><br/>
+        <strong>Home City</strong> </td>
+    <td width="132" valign="top"><p><strong>Destination    City</strong></p></td>
+    <td width="114" valign="top"><p><strong>Flying Time</strong></p></td>
+    <td width="108" valign="top"><p><strong>Layover Time</strong></p></td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><p>(#1) Toronto</p></td>
+    <td width="132" valign="top"><p>(#2) Atlanta</p></td>
+    <td width="114" valign="top"><p>4:15</p></td>
+    <td width="108" valign="top"><p>1:20</p></td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><p>(#2) Atlanta</p></td>
+    <td width="132" valign="top"><p>(#3) Austin</p></td>
+    <td width="114" valign="top"><p>3:58</p></td>
+    <td width="108" valign="top"><p>0:46</p></td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><p>(#3) Austin</p></td>
+    <td width="132" valign="top"><p>(#4) Denver</p></td>
+    <td width="114" valign="top"><p>3:55</p></td>
+    <td width="108" valign="top"><p>11:29</p></td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><p>(#4) Denver</p></td>
+    <td width="132" valign="top"><p>(#5) Chicago</p></td>
+    <td width="114" valign="top"><p>2:14</p></td>
+    <td width="108" valign="top"><p>0:53</p></td>
+  </tr>
+  <tr>
+    <td width="96" valign="top"><p>(#5) Chicago</p></td>
+    <td width="132" valign="top"><p>(#6) Buffalo</p></td>
+    <td width="114" valign="top"><p>3:27</p></td>
+    <td width="108" valign="top"><p>none</p></td>
+  </tr>
+</table>
+<h2>Functional Requirements</h2>
+<ul>
+  <li>The user must provide the starting and ending  cities as a <strong>number</strong>. &#160;The numbers corresponding to each city are  shown in the table above (e.g. Toronto is city #1, Chicago is city #5).&#160; Do not change the numbers for the cities.
+    <ul>
+        <li>Your program must loop <strong>until the user selects city #0</strong> for the starting city.</li>
+      <li>In the loop, ask the user for the <strong>starting city</strong> and then for the <strong>ending city</strong>.</li>
+      <li>Once you get the ending city, calculate and display the elapsed time to travel between the cities if they are valid OR display an error message if the cities are not valid.
+        <ul>
+              <li>The result must be calculated and displayed <strong>in correct hh:mm format</strong>, not hours only  or minutes only. The result should include all layovers  between cities but not the layover once you get into the ending city. </li>
+        </ul>
+      </li>
+      <li>I&#39;m serious about not changing the city numbers.<br/>
+        </li>
+    </ul>
+  </li>
+  <li>The program must not produce incorrect output or  crash or hang if invalid input is used.</li>
+</ul>
+<h2>Other Requirements</h2>
+<ul>
+  <li>It must use <strong>at  least one non-trivial user-created function</strong> other than main() and the  function you use for getting user input. <strong>Parameters</strong> must be passed and/or <strong>return</strong> <strong>values</strong> used. </li>
+  <li>It  must not use global variables or goto. Any use of scanf() will be handled as described in class.. <br/>
+  </li>
+  <li>The flying and layover times must be stored as <strong>one multi-dimensional array (you might not know how to do this yet) or two one-dimensional arrays in main().</strong> These arrays must be <strong>passed</strong> to a function that does the time  calculations (so that I can see that you know how to do it). &#160;The addition of the times must be done using a <strong>loop </strong>of some type.<br/>
+  </li>
+  <li>Assume that the user will always enter less than  80 characters. <br/>
+  </li>
+  <li>If you wish, you can use the getNum() function  provided previously.<br/>
+  </li>
+  <li>The program must be commented adequately and  indented correctly. </li>
+</ul>
+<h2>File Requirements<br/>
+</h2>
+<ul>
+  <li>Call your project cA4.</li>
+  <li>You must call your program &quot;<strong>cA4.c</strong>&quot; to generate &quot;<strong>cA4.exe</strong>&quot;. Rename <strong>cA4.exe </strong>to <strong>cA4.x. </strong>Put<strong> cA4.c </strong>and<strong> cA4.x </strong>in the appropriate dropbox on D2L.</li>
+</ul>
+<p><strong>NOTES:</strong><br/>
+  </p>
+<ul>
+  <li>Do not  support going <strong>backwards</strong> (e.g. from Denver to  Toronto). If they try to do so, display an error message and continue with the program.</li>
+  <li>Do not support going from one city to the same city (e.g. from Denver to Denver). If they try to do so, display an error message and continue with the program.</li>
+  <li>Make sure that the user never has to guess about what the city numbers are.</li>
+  <li>Be aware that Visual Studio will NOT allow the use of const-declared values as array sizes. You must use #define instead if you want to avoid using a magic number in the size of an array.<br/>
+  </li>
+  <li>A &quot;<strong>layover</strong>&quot;  is an amount of time that you have to wait in the airport between flights. Make  sure that you don&#39;t include the layover at the end of the trip! <br/>
+    As an example, your program should be able to  calculate how long it takes to fly from Austin to Chicago or Toronto to Denver  but not Chicago to Austin (that&#39;s backwards). To fly from Austin to Chicago, it  would take 3:55 (Austin to Denver) + 11:29 (layover in Denver) + 2:14 (Denver  to Chicago ). </li>
+</ul>
+
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.3.0.791-56 "></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');</script></body></html>

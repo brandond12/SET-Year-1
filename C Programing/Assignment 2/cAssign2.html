@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head></head><body>
+
+
+
+
+
+
+
+<h1>Assignment #2</h1>
+<h2>Overview of Requirements</h2>
+<ul>
+  <li>Write a program that uses a function to calculate the result of raising one number to the power of another.</li>
+  <li>Use an on-screen menu to prompt for user input.
+    <ul>
+      <li> The menu must look like this:</li>
+    </ul>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p>Power Menu:</p>
+    <ol>
+      <li>Change base</li>
+      <li>Change exponent</li>
+      <li>Display base raised to exponent</li>
+      <li>Exit program</li>
+    </ol>
+    <p>Option?</p>
+  </blockquote>
+</blockquote>
+<p>For example, the function should be able to compute the fact that 10 to the power 3 is 1000 and that 20 to the power 4 is 160000. Test your program with more than the above two sets of values.</p>
+<h2>Detailed Functional Requirements</h2>
+<h3>Actions:</h3>
+<ul>
+<li>The user must be prompted for the base or exponent whenever they choose that option.  The result must be calculated and displayed on user request through a menu option (as above).</li>
+  <li>The program <strong>must loop and must only exit</strong> when the appropriate menu item is chosen.</li>
+</ul>
+<h3>Calculation:</h3>
+The power calculation must be done using a function that you create. Requirements for this function:<br/>
+<ul>
+  <li>It must take two parameters (the base and exponent).</li>
+  <li>It must return the calculated value to the calling function.</li>
+  <li>It must use a while, do-while, or for statement to calculate the power. Multiple if-else statements are not permitted in this function! </li>
+</ul>
+<h3>Values:</h3>
+<ul><li>Initial values for the base and exponent must be 1.</li>
+<li>  The base and exponent values are always integers.</li>
+  <li>The base number (that is, the number which is being raised to the exponent) must only be in the range 1 to 25.</li>
+<li>  The exponent must only be in the range 1 to 5.</li>
+<li>  Range checking for the base and exponent must be done using a function that you create. Requirements for this function:
+  <ul>
+<li>  It must take at least three parameters (value to check, minimum acceptable value, maximum acceptable value). You can have more parameters if you wish.</li>
+<li>  It must return 0 if the value is out of range and 1 if the value is within the specified range.</li>
+<li>  It must print an error message if the value is out of range.</li>
+</ul></li>
+<li> Out-of-range bases and exponents must restore the previous value.
+<ul>
+    <li>Do NOT reprompt the user for a valid base or exponent if they enter one that is out of range.</li>
+  </ul>
+</li>
+</ul>
+<h2>Other Requirements</h2>
+<ul>
+  <li>It must not use scanf() or fscanf().</li>
+  <li>It must not use global variables.</li>
+  <li>It must not use goto.</li>
+  <li>It must not use the pow() function.</li>
+  <li>You must not call the main() function recursively (in other words, don&#39;t have a call to main() within any of your functions).</li>
+  <li>Appropriate programming style as discussed in class and in the Course Notes must be used.</li>
+  <li> Function prototypes for all functions you create (except main()) must be used.</li>
+</ul>
+  
+<h2>File Requirements:</h2>
+<ul>
+  <li>Call your project cA2.  </li>
+  <li>You must call your program cA2.c to generate cA2.exe.  Before submitting, change the filename to cA2.x.</li>
+  <li>Put the above two files into the appropriate eConestoga drop box when you submit your assignment.</li>
+</ul>
+<h3>getnum():</h3>
+You can use a function such as the following to get input:
+<pre>   
+#pragma warning(disable: 4996)
+int getNum(void)
+{
+/* the array is 121 bytes in size; we&#39;ll see in a later lecture how we can improve this code */
+char record[121] = {0}; /* record stores the string */
+int number = 0;
+    /* NOTE to student: indent and brace this function consistent with your others */
+    /* use fgets() to get a string from the keyboard */
+    fgets(record, 121, stdin);
+    /* extract the number from the string; sscanf() returns a number 
+     * corresponding with the number of items it found in the string */
+    if( sscanf(record, &quot;%d&quot;, &amp;number) != 1 )
+    {
+        /* if the user did not enter a number recognizable by 
+         * the system, set number to -1 */
+        number = -1;
+    }
+    return number;
+}</pre>
+Make sure that you create a function comment for getNum().
+
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.3.0.791-56 "></script><script type="text/javascript">D2LMathML.DesktopInit('/d2l/common/mathjax/2.1/MathJax.js?config=MML_HTMLorMML','/d2l/common/mathjax/2.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML');</script></body></html>
